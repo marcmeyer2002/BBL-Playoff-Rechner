@@ -1,0 +1,15 @@
+{
+  "name": "bbl-playoff-rechner",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "BBL Wahrscheinlichkeiten für Science City Jena (JS)",
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "vitest": "^3.2.4"
+  }
+}
