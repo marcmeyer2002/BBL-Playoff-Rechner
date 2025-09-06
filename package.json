@@ -7,9 +7,13 @@
     "node": ">=18.17"
   },
   "scripts": {
-    "test": "vitest run"
+    "test": "vitest run",
+    "snoop:json": "node spikes/snoop_json_endpoint.js"
   },
   "devDependencies": {
     "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "cheerio": "^1.1.2"
   }
 }
