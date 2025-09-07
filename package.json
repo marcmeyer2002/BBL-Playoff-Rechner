@@ -10,7 +10,10 @@
     "test": "vitest run",
     "snoop:games": "node spikes/snoop_games_endpoint.js",
     "snoop:standings": "node spikes/snoop_standings_endpoint.js",
-    "check:games": "node spikes/check_games_integrity.js"
+    "check:games": "node spikes/check_games_integrity.js",
+    "whatif:next": "node spikes/whatif_next_matchday.js",
+    "whatif:season": "node spikes/whatif_season_mc.js",
+    "marginals:next": "node spikes/marginals_next_matchday.js"
   },
   "devDependencies": {
     "vitest": "^3.2.4"
