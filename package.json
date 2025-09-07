@@ -13,7 +13,8 @@
     "check:games": "node spikes/check_games_integrity.js",
     "whatif:next": "node spikes/whatif_next_matchday.js",
     "whatif:season": "node spikes/whatif_season_mc.js",
-    "marginals:next": "node spikes/marginals_next_matchday.js"
+    "marginals:next": "node spikes/marginals_next_matchday.js",
+    "export:probabilities": "node spikes/export_probabilities.js"
   },
   "devDependencies": {
     "vitest": "^3.2.4"
