@@ -8,7 +8,9 @@
   },
   "scripts": {
     "test": "vitest run",
-    "snoop:json": "node spikes/snoop_json_endpoint.js"
+    "snoop:games": "node spikes/snoop_games_endpoint.js",
+    "snoop:standings": "node spikes/snoop_standings_endpoint.js",
+    "check:games": "node spikes/check_games_integrity.js"
   },
   "devDependencies": {
     "vitest": "^3.2.4"
