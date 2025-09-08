@@ -14,7 +14,8 @@
     "whatif:next": "node spikes/whatif_next_matchday.js",
     "whatif:season": "node spikes/whatif_season_mc.js",
     "marginals:next": "node spikes/marginals_next_matchday.js",
-    "export:probabilities": "node spikes/export_probabilities.js"
+    "export:probabilities": "node spikes/export_probabilities.js",
+    "export:probabilities:conditional": "node spikes/export_probabilities_conditional.js"
   },
   "devDependencies": {
     "vitest": "^3.2.4"
