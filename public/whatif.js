@@ -1,6 +1,4 @@
-// What-If für JEN im PlayoffStatus-Stil:
-// 1) Next-Game-Box (Win / Current / Lose)
-// 2) Best/Worst-Case-Scenarios (3 Zeilen + Spiel-Listen)
+// What-If (JEN): Next Game + Best/Worst + Remaining Games  —  50/50
 
 const TEAM = 'JEN';
 
@@ -73,7 +71,7 @@ function renderNextHeader(nextMdPayload, currentW, currentL) {
   info.textContent  = `Spieltag #${g.matchDay} • ${new Date(g.scheduledTime).toLocaleString()} • Aktueller Record: ${currentW}-${currentL}`;
 }
 
-function rowHTML(label, w, l, buckets, highlight=false) {
+function renderBWRow(label, buckets, highlight=false) {
   return `
     <tr class="${highlight ? 'hlrow' : ''}">
       <td class="center">${label}</td>
@@ -88,9 +86,9 @@ function rowHTML(label, w, l, buckets, highlight=false) {
 function renderBestWorstBox(bw) {
   const tbody = document.querySelector('#bwBody');
   tbody.innerHTML =
-    rowHTML('Best Case Scenario', 0, 0, bw.scenarios.best, true) +
-    rowHTML('Current Standings',  0, 0, bw.scenarios.current, false) +
-    rowHTML('Worst Case Scenario',0, 0, bw.scenarios.worst, false);
+    renderBWRow('Best Case Scenario',  bw.scenarios.best,   true) +
+    renderBWRow('Current Standings',   bw.scenarios.current, false) +
+    renderBWRow('Worst Case Scenario', bw.scenarios.worst,  false);
 
   const bestUl  = document.querySelector('#bwBestList');
   const worstUl = document.querySelector('#bwWorstList');
@@ -98,8 +96,27 @@ function renderBestWorstBox(bw) {
   worstUl.innerHTML = (bw.picks.worst || []).map(p => `<li>${p.home} vs ${p.away} — <b>${p.choose === 'home' ? p.home : p.away}</b> gewinnt</li>`).join('');
 }
 
+function renderRemaining(rem) {
+  const tbody = document.querySelector('#remBody');
+  if (!rem || !Array.isArray(rem.rows)) {
+    tbody.innerHTML = `<tr><td colspan="7" class="center">Keine Daten</td></tr>`;
+    return;
+  }
+  tbody.innerHTML = rem.rows.map(r => `
+    <tr>
+      <td class="center">${r.winsOfRemaining} of ${r.remainingTotal}</td>
+      <td class="center">${r.winPctRemaining}%</td>
+      <td class="center">${r.resultantRecord.wins}-${r.resultantRecord.losses}</td>
+      <td class="center">${fmtPct(r.buckets.playoffs)}</td>
+      <td class="center">${fmtPct(r.buckets.playin)}</td>
+      <td class="center">${fmtPct(r.buckets.mid)}</td>
+      <td class="center">${fmtPct(r.buckets.releg)}</td>
+    </tr>
+  `).join('');
+}
+
 async function main() {
-  // 1) Basis-Kram
+  // Basisladungen
   const [probBase, probWin, probLose, nextMd] = await Promise.all([
     loadJSON('./probabilities.json'),
     loadJSON('./probabilities_if_win.json').catch(()=>null),
@@ -108,7 +125,7 @@ async function main() {
   ]);
   renderMeta(probBase);
 
-  // 2) Next-Game-Box
+  // Next Game Tabelle
   const base = pickTeam(probBase, TEAM);
   const win  = probWin  ? pickTeam(probWin,  TEAM) : null;
   const lose = probLose ? pickTeam(probLose, TEAM) : null;
@@ -154,10 +171,13 @@ async function main() {
     </tr>`;
   nextBody.innerHTML = html;
 
-  // 3) Best/Worst-Case-Box
+  // Best/Worst
   const bw = await loadJSON('./bestworst_JEN.json').catch(()=>null);
   if (bw) renderBestWorstBox(bw);
-  else document.querySelector('#bwCard').insertAdjacentHTML('beforeend', `<p class="muted">Noch keine Best/Worst-Case Daten generiert.</p>`);
+
+  // Remaining Games
+  const rem = await loadJSON('./remaining_JEN.json').catch(()=>null);
+  if (rem) renderRemaining(rem);
 }
 
 main().catch(e => alert(`Fehler: ${e.message}`));

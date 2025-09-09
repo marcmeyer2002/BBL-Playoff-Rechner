@@ -18,7 +18,8 @@
     "export:probabilities:conditional": "node spikes/export_probabilities_conditional.js",
     "export:nextmd": "node spikes/export_next_matchday.js",
     "export:marginals:jena": "node spikes/export_marginals_jena.js",
-    "export:bestworst:jena": "node spikes/export_bestworst_jena.js"
+    "export:bestworst:jena": "node spikes/export_bestworst_jena.js",
+    "export:remaining:jena": "node spikes/export_remaining_jena.js"
   },
   "devDependencies": {
     "vitest": "^3.2.4"
