@@ -1,0 +1,535 @@
+{
+  "generatedAt": "2025-09-09T21:32:16.943Z",
+  "parameters": {
+    "SUBSETS_PER_K": 40,
+    "MC_ITERS": 400
+  },
+  "team": "BON",
+  "rows": [
+    {
+      "winsOfRemaining": 34,
+      "remainingTotal": 34,
+      "winPctRemaining": 100,
+      "resultantRecord": {
+        "wins": 34,
+        "losses": 0
+      },
+      "buckets": {
+        "playoffs": 100,
+        "playin": 0,
+        "mid": 0,
+        "releg": 0
+      }
+    },
+    {
+      "winsOfRemaining": 33,
+      "remainingTotal": 34,
+      "winPctRemaining": 97,
+      "resultantRecord": {
+        "wins": 33,
+        "losses": 1
+      },
+      "buckets": {
+        "playoffs": 100,
+        "playin": 0,
+        "mid": 0,
+        "releg": 0
+      }
+    },
+    {
+      "winsOfRemaining": 32,
+      "remainingTotal": 34,
+      "winPctRemaining": 94,
+      "resultantRecord": {
+        "wins": 32,
+        "losses": 2
+      },
+      "buckets": {
+        "playoffs": 100,
+        "playin": 0,
+        "mid": 0,
+        "releg": 0
+      }
+    },
+    {
+      "winsOfRemaining": 31,
+      "remainingTotal": 34,
+      "winPctRemaining": 91,
+      "resultantRecord": {
+        "wins": 31,
+        "losses": 3
+      },
+      "buckets": {
+        "playoffs": 100,
+        "playin": 0,
+        "mid": 0,
+        "releg": 0
+      }
+    },
+    {
+      "winsOfRemaining": 30,
+      "remainingTotal": 34,
+      "winPctRemaining": 88,
+      "resultantRecord": {
+        "wins": 30,
+        "losses": 4
+      },
+      "buckets": {
+        "playoffs": 100,
+        "playin": 0,
+        "mid": 0,
+        "releg": 0
+      }
+    },
+    {
+      "winsOfRemaining": 29,
+      "remainingTotal": 34,
+      "winPctRemaining": 85,
+      "resultantRecord": {
+        "wins": 29,
+        "losses": 5
+      },
+      "buckets": {
+        "playoffs": 100,
+        "playin": 0,
+        "mid": 0,
+        "releg": 0
+      }
+    },
+    {
+      "winsOfRemaining": 28,
+      "remainingTotal": 34,
+      "winPctRemaining": 82,
+      "resultantRecord": {
+        "wins": 28,
+        "losses": 6
+      },
+      "buckets": {
+        "playoffs": 100,
+        "playin": 0,
+        "mid": 0,
+        "releg": 0
+      }
+    },
+    {
+      "winsOfRemaining": 27,
+      "remainingTotal": 34,
+      "winPctRemaining": 79,
+      "resultantRecord": {
+        "wins": 27,
+        "losses": 7
+      },
+      "buckets": {
+        "playoffs": 100,
+        "playin": 0,
+        "mid": 0,
+        "releg": 0
+      }
+    },
+    {
+      "winsOfRemaining": 26,
+      "remainingTotal": 34,
+      "winPctRemaining": 76,
+      "resultantRecord": {
+        "wins": 26,
+        "losses": 8
+      },
+      "buckets": {
+        "playoffs": 100,
+        "playin": 0,
+        "mid": 0,
+        "releg": 0
+      }
+    },
+    {
+      "winsOfRemaining": 25,
+      "remainingTotal": 34,
+      "winPctRemaining": 74,
+      "resultantRecord": {
+        "wins": 25,
+        "losses": 9
+      },
+      "buckets": {
+        "playoffs": 100,
+        "playin": 0,
+        "mid": 0,
+        "releg": 0
+      }
+    },
+    {
+      "winsOfRemaining": 24,
+      "remainingTotal": 34,
+      "winPctRemaining": 71,
+      "resultantRecord": {
+        "wins": 24,
+        "losses": 10
+      },
+      "buckets": {
+        "playoffs": 100,
+        "playin": 0,
+        "mid": 0,
+        "releg": 0
+      }
+    },
+    {
+      "winsOfRemaining": 23,
+      "remainingTotal": 34,
+      "winPctRemaining": 68,
+      "resultantRecord": {
+        "wins": 23,
+        "losses": 11
+      },
+      "buckets": {
+        "playoffs": 100,
+        "playin": 0,
+        "mid": 0,
+        "releg": 0
+      }
+    },
+    {
+      "winsOfRemaining": 22,
+      "remainingTotal": 34,
+      "winPctRemaining": 65,
+      "resultantRecord": {
+        "wins": 22,
+        "losses": 12
+      },
+      "buckets": {
+        "playoffs": 100,
+        "playin": 0,
+        "mid": 0,
+        "releg": 0
+      }
+    },
+    {
+      "winsOfRemaining": 21,
+      "remainingTotal": 34,
+      "winPctRemaining": 62,
+      "resultantRecord": {
+        "wins": 21,
+        "losses": 13
+      },
+      "buckets": {
+        "playoffs": 100,
+        "playin": 0,
+        "mid": 0,
+        "releg": 0
+      }
+    },
+    {
+      "winsOfRemaining": 20,
+      "remainingTotal": 34,
+      "winPctRemaining": 59,
+      "resultantRecord": {
+        "wins": 20,
+        "losses": 14
+      },
+      "buckets": {
+        "playoffs": 100,
+        "playin": 0,
+        "mid": 0,
+        "releg": 0
+      }
+    },
+    {
+      "winsOfRemaining": 19,
+      "remainingTotal": 34,
+      "winPctRemaining": 56,
+      "resultantRecord": {
+        "wins": 19,
+        "losses": 15
+      },
+      "buckets": {
+        "playoffs": 97.2,
+        "playin": 2.9,
+        "mid": 0,
+        "releg": 0
+      }
+    },
+    {
+      "winsOfRemaining": 18,
+      "remainingTotal": 34,
+      "winPctRemaining": 53,
+      "resultantRecord": {
+        "wins": 18,
+        "losses": 16
+      },
+      "buckets": {
+        "playoffs": 58.8,
+        "playin": 41.2,
+        "mid": 0,
+        "releg": 0
+      }
+    },
+    {
+      "winsOfRemaining": 17,
+      "remainingTotal": 34,
+      "winPctRemaining": 50,
+      "resultantRecord": {
+        "wins": 17,
+        "losses": 17
+      },
+      "buckets": {
+        "playoffs": 3.8,
+        "playin": 90.3,
+        "mid": 6,
+        "releg": 0
+      }
+    },
+    {
+      "winsOfRemaining": 16,
+      "remainingTotal": 34,
+      "winPctRemaining": 47,
+      "resultantRecord": {
+        "wins": 16,
+        "losses": 18
+      },
+      "buckets": {
+        "playoffs": 0,
+        "playin": 31.4,
+        "mid": 68.7,
+        "releg": 0
+      }
+    },
+    {
+      "winsOfRemaining": 15,
+      "remainingTotal": 34,
+      "winPctRemaining": 44,
+      "resultantRecord": {
+        "wins": 15,
+        "losses": 19
+      },
+      "buckets": {
+        "playoffs": 0,
+        "playin": 0.9,
+        "mid": 98.8,
+        "releg": 0.3
+      }
+    },
+    {
+      "winsOfRemaining": 14,
+      "remainingTotal": 34,
+      "winPctRemaining": 41,
+      "resultantRecord": {
+        "wins": 14,
+        "losses": 20
+      },
+      "buckets": {
+        "playoffs": 0,
+        "playin": 0,
+        "mid": 88.9,
+        "releg": 11.2
+      }
+    },
+    {
+      "winsOfRemaining": 13,
+      "remainingTotal": 34,
+      "winPctRemaining": 38,
+      "resultantRecord": {
+        "wins": 13,
+        "losses": 21
+      },
+      "buckets": {
+        "playoffs": 0,
+        "playin": 0,
+        "mid": 50.3,
+        "releg": 49.8
+      }
+    },
+    {
+      "winsOfRemaining": 12,
+      "remainingTotal": 34,
+      "winPctRemaining": 35,
+      "resultantRecord": {
+        "wins": 12,
+        "losses": 22
+      },
+      "buckets": {
+        "playoffs": 0,
+        "playin": 0,
+        "mid": 16,
+        "releg": 84.1
+      }
+    },
+    {
+      "winsOfRemaining": 11,
+      "remainingTotal": 34,
+      "winPctRemaining": 32,
+      "resultantRecord": {
+        "wins": 11,
+        "losses": 23
+      },
+      "buckets": {
+        "playoffs": 0,
+        "playin": 0,
+        "mid": 2.9,
+        "releg": 97.1
+      }
+    },
+    {
+      "winsOfRemaining": 10,
+      "remainingTotal": 34,
+      "winPctRemaining": 29,
+      "resultantRecord": {
+        "wins": 10,
+        "losses": 24
+      },
+      "buckets": {
+        "playoffs": 0,
+        "playin": 0,
+        "mid": 0.4,
+        "releg": 99.6
+      }
+    },
+    {
+      "winsOfRemaining": 9,
+      "remainingTotal": 34,
+      "winPctRemaining": 26,
+      "resultantRecord": {
+        "wins": 9,
+        "losses": 25
+      },
+      "buckets": {
+        "playoffs": 0,
+        "playin": 0,
+        "mid": 0,
+        "releg": 100
+      }
+    },
+    {
+      "winsOfRemaining": 8,
+      "remainingTotal": 34,
+      "winPctRemaining": 24,
+      "resultantRecord": {
+        "wins": 8,
+        "losses": 26
+      },
+      "buckets": {
+        "playoffs": 0,
+        "playin": 0,
+        "mid": 0,
+        "releg": 100
+      }
+    },
+    {
+      "winsOfRemaining": 7,
+      "remainingTotal": 34,
+      "winPctRemaining": 21,
+      "resultantRecord": {
+        "wins": 7,
+        "losses": 27
+      },
+      "buckets": {
+        "playoffs": 0,
+        "playin": 0,
+        "mid": 0,
+        "releg": 100
+      }
+    },
+    {
+      "winsOfRemaining": 6,
+      "remainingTotal": 34,
+      "winPctRemaining": 18,
+      "resultantRecord": {
+        "wins": 6,
+        "losses": 28
+      },
+      "buckets": {
+        "playoffs": 0,
+        "playin": 0,
+        "mid": 0,
+        "releg": 100
+      }
+    },
+    {
+      "winsOfRemaining": 5,
+      "remainingTotal": 34,
+      "winPctRemaining": 15,
+      "resultantRecord": {
+        "wins": 5,
+        "losses": 29
+      },
+      "buckets": {
+        "playoffs": 0,
+        "playin": 0,
+        "mid": 0,
+        "releg": 100
+      }
+    },
+    {
+      "winsOfRemaining": 4,
+      "remainingTotal": 34,
+      "winPctRemaining": 12,
+      "resultantRecord": {
+        "wins": 4,
+        "losses": 30
+      },
+      "buckets": {
+        "playoffs": 0,
+        "playin": 0,
+        "mid": 0,
+        "releg": 100
+      }
+    },
+    {
+      "winsOfRemaining": 3,
+      "remainingTotal": 34,
+      "winPctRemaining": 9,
+      "resultantRecord": {
+        "wins": 3,
+        "losses": 31
+      },
+      "buckets": {
+        "playoffs": 0,
+        "playin": 0,
+        "mid": 0,
+        "releg": 100
+      }
+    },
+    {
+      "winsOfRemaining": 2,
+      "remainingTotal": 34,
+      "winPctRemaining": 6,
+      "resultantRecord": {
+        "wins": 2,
+        "losses": 32
+      },
+      "buckets": {
+        "playoffs": 0,
+        "playin": 0,
+        "mid": 0,
+        "releg": 100
+      }
+    },
+    {
+      "winsOfRemaining": 1,
+      "remainingTotal": 34,
+      "winPctRemaining": 3,
+      "resultantRecord": {
+        "wins": 1,
+        "losses": 33
+      },
+      "buckets": {
+        "playoffs": 0,
+        "playin": 0,
+        "mid": 0,
+        "releg": 100
+      }
+    },
+    {
+      "winsOfRemaining": 0,
+      "remainingTotal": 34,
+      "winPctRemaining": 0,
+      "resultantRecord": {
+        "wins": 0,
+        "losses": 34
+      },
+      "buckets": {
+        "playoffs": 0,
+        "playin": 0,
+        "mid": 0,
+        "releg": 100
+      }
+    }
+  ]
+}

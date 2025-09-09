@@ -1,6 +1,11 @@
-// What-If (JEN): Next Game + Best/Worst + Remaining Games  —  50/50
+// What-If: Next Game + Best/Worst + Remaining Games — 50/50
+// Neu: Team per URL-Parameter ?team=JEN (Default JEN)
 
-const TEAM = 'JEN';
+function getTeamFromQuery() {
+  const t = new URLSearchParams(location.search).get('team');
+  return (t || 'JEN').toUpperCase();
+}
+const TEAM = getTeamFromQuery();
 
 const fmtPct = (n) => `${Number(n).toFixed(1)}%`;
 
@@ -46,20 +51,22 @@ async function loadJSON(file) {
 function renderMeta(probBase) {
   document.querySelector('#meta').textContent =
     `Stand: ${new Date(probBase.generatedAt).toLocaleString()} • Iterations: ${probBase.iterations} • Nächster Spieltag: #${probBase.nextMatchday}`;
+  const h1 = document.querySelector('#pageTitle');
+  if (h1) h1.textContent = `${TEAM} — What-If (50/50)`;
 }
 
-function findJenaNextGame(nextMdPayload) {
+function findTeamNextGame(nextMdPayload) {
   return nextMdPayload.games.find(g => g.home.tlc === TEAM || g.away.tlc === TEAM);
 }
 
 function renderNextHeader(nextMdPayload, currentW, currentL) {
-  const g = findJenaNextGame(nextMdPayload);
+  const g = findTeamNextGame(nextMdPayload);
   const title = document.querySelector('#nextTitle');
   const info  = document.querySelector('#nextInfo');
 
   if (!g) {
     title.textContent = `Nächstes Spiel`;
-    info.textContent  = `Jena spielt an Spieltag #${nextMdPayload.matchDay} nicht. Aktueller Record: ${currentW}-${currentL}.`;
+    info.textContent  = `${TEAM} spielt an Spieltag #${nextMdPayload.matchDay} nicht. Aktueller Record: ${currentW}-${currentL}.`;
     return;
   }
 
@@ -117,22 +124,26 @@ function renderRemaining(rem) {
 
 async function main() {
   // Basisladungen
-  const [probBase, probWin, probLose, nextMd] = await Promise.all([
+  const [probBase, nextMd] = await Promise.all([
     loadJSON('./probabilities.json'),
-    loadJSON('./probabilities_if_win.json').catch(()=>null),
-    loadJSON('./probabilities_if_lose.json').catch(()=>null),
     loadJSON('./next_matchday.json'),
   ]);
   renderMeta(probBase);
 
-  // Next Game Tabelle
+  // Next Game Tabelle (immer verfügbar)
   const base = pickTeam(probBase, TEAM);
-  const win  = probWin  ? pickTeam(probWin,  TEAM) : null;
-  const lose = probLose ? pickTeam(probLose, TEAM) : null;
-
   renderNextHeader(nextMd, base.record.wins, base.record.losses);
 
   const nextBody = document.querySelector('#nextTableBody');
+
+  // Die konditionalen Dateien (_if_win/_if_lose) gelten aktuell NUR für JEN.
+  // Für andere Teams zeigen wir nur "Current Standings".
+let win = await loadJSON(`./probabilities_if_${TEAM}_win.json`)
+  .then(p => pickTeam(p, TEAM)).catch(()=>null);
+let lose = await loadJSON(`./probabilities_if_${TEAM}_lose.json`)
+  .then(p => pickTeam(p, TEAM)).catch(()=>null);
+
+
   const wNext = base.record.wins + 1;
   const lNext = base.record.losses + 0;
   const wLose = base.record.wins + 0;
@@ -172,12 +183,16 @@ async function main() {
   nextBody.innerHTML = html;
 
   // Best/Worst
-  const bw = await loadJSON('./bestworst_JEN.json').catch(()=>null);
+  const bw = await loadJSON(`./bestworst_${TEAM}.json`).catch(()=>null);
   if (bw) renderBestWorstBox(bw);
+  else document.querySelector('#bwBody').innerHTML =
+    `<tr><td colspan="5" class="center">Noch keine Best/Worst-Case Daten für ${TEAM} generiert.</td></tr>`;
 
   // Remaining Games
-  const rem = await loadJSON('./remaining_JEN.json').catch(()=>null);
+  const rem = await loadJSON(`./remaining_${TEAM}.json`).catch(()=>null);
   if (rem) renderRemaining(rem);
+  else document.querySelector('#remBody').innerHTML =
+    `<tr><td colspan="7" class="center">Noch keine Remaining-Games Daten für ${TEAM} generiert.</td></tr>`;
 }
 
 main().catch(e => alert(`Fehler: ${e.message}`));
