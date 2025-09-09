@@ -53,10 +53,40 @@
       </section>
 
       <!-- Platzhalter für Best/Worst Case (folgt im nächsten Schritt) -->
-      <section class="card">
-        <div class="title">Best/Worst-Case (nächster Spieltag)</div>
-        <p class="muted">Kommt als nächstes: Wir zeigen die 2–3 Partien am aktuellen Spieltag, deren Ausgang JENAs Playoff-Chance am meisten beeinflusst.</p>
-      </section>
+      <section class="card" id="bwCard">
+  <div class="title">Best/Worst Case Scenarios</div>
+
+  <table class="slim" style="width:100%">
+    <thead>
+      <tr>
+        <th></th>
+        <th class="center">Playoffs<br/>(1–6)</th>
+        <th class="center">Play-In<br/>(7–10)</th>
+        <th class="center">Mittelfeld<br/>(11–16)</th>
+        <th class="center">Abstieg<br/>(17–18)</th>
+      </tr>
+    </thead>
+    <tbody id="bwBody"></tbody>
+  </table>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px">
+    <div>
+      <div class="title" style="margin-bottom:6px">Best Case Scenario</div>
+      <ul id="bwBestList" class="muted" style="margin:0 0 8px 18px"></ul>
+    </div>
+    <div>
+      <div class="title" style="margin-bottom:6px">Worst Case Scenario</div>
+      <ul id="bwWorstList" class="muted" style="margin:0 0 8px 18px"></ul>
+    </div>
+  </div>
+
+  <p class="muted" style="margin-top:6px">
+    Nur Spiele des aktuellen Spieltags berücksichtigt. Maximal drei Partien mit
+    signifikanter Auswirkung einbezogen – analog PlayoffStatus.
+  </p>
+</section>
+
+
     </main>
 
     <script type="module" src="./whatif.js"></script>

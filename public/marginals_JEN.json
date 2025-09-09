@@ -1,0 +1,102 @@
+{
+  "generatedAt": "2025-09-09T19:08:44.990Z",
+  "iterations": 10000,
+  "team": "JEN",
+  "matchDay": 1,
+  "unconditional": [
+    {
+      "id": "2003986",
+      "matchDay": 1,
+      "home": "FCB",
+      "away": "JEN",
+      "better": "away",
+      "deltaPctAbs": 0.13139999999999996,
+      "top6_if_home": 28,
+      "top6_if_away": 41.1
+    },
+    {
+      "id": "2003987",
+      "matchDay": 1,
+      "home": "VEC",
+      "away": "HDB",
+      "better": "away",
+      "deltaPctAbs": 0.003599999999999992,
+      "top6_if_home": 33.7,
+      "top6_if_away": 34.1
+    },
+    {
+      "id": "2003992",
+      "matchDay": 1,
+      "home": "ULM",
+      "away": "CHE",
+      "better": "away",
+      "deltaPctAbs": 0.003599999999999992,
+      "top6_if_home": 34.4,
+      "top6_if_away": 34.7
+    }
+  ],
+  "ifWin": [
+    {
+      "id": "2003991",
+      "matchDay": 1,
+      "home": "HAM",
+      "away": "MBC",
+      "better": "away",
+      "deltaPctAbs": 0.010099999999999998,
+      "top6_if_home": 40.4,
+      "top6_if_away": 41.4
+    },
+    {
+      "id": "2003987",
+      "matchDay": 1,
+      "home": "VEC",
+      "away": "HDB",
+      "better": "away",
+      "deltaPctAbs": 0.00539999999999996,
+      "top6_if_home": 40,
+      "top6_if_away": 40.5
+    },
+    {
+      "id": "2003988",
+      "matchDay": 1,
+      "home": "BRA",
+      "away": "BAM",
+      "better": "home",
+      "deltaPctAbs": 0.005199999999999982,
+      "top6_if_home": 40.8,
+      "top6_if_away": 40.3
+    }
+  ],
+  "ifLose": [
+    {
+      "id": "2003987",
+      "matchDay": 1,
+      "home": "VEC",
+      "away": "HDB",
+      "better": "away",
+      "deltaPctAbs": 0.012900000000000023,
+      "top6_if_home": 27.5,
+      "top6_if_away": 28.8
+    },
+    {
+      "id": "2003993",
+      "matchDay": 1,
+      "home": "OLD",
+      "away": "FRS",
+      "better": "home",
+      "deltaPctAbs": 0.009599999999999997,
+      "top6_if_home": 28.2,
+      "top6_if_away": 27.2
+    },
+    {
+      "id": "2003988",
+      "matchDay": 1,
+      "home": "BRA",
+      "away": "BAM",
+      "better": "home",
+      "deltaPctAbs": 0.008700000000000041,
+      "top6_if_home": 28.3,
+      "top6_if_away": 27.4
+    }
+  ]
+}

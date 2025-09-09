@@ -1,0 +1,71 @@
+{
+  "generatedAt": "2025-09-09T19:14:41.878Z",
+  "iterations": 15000,
+  "team": "JEN",
+  "matchDay": 1,
+  "picks": {
+    "best": [
+      {
+        "id": "2003989",
+        "home": "BON",
+        "away": "WUE",
+        "choose": "away"
+      },
+      {
+        "id": "2003992",
+        "home": "ULM",
+        "away": "CHE",
+        "choose": "away"
+      },
+      {
+        "id": "2003993",
+        "home": "OLD",
+        "away": "FRS",
+        "choose": "away"
+      }
+    ],
+    "worst": [
+      {
+        "id": "2003989",
+        "home": "BON",
+        "away": "WUE",
+        "choose": "home"
+      },
+      {
+        "id": "2003992",
+        "home": "ULM",
+        "away": "CHE",
+        "choose": "home"
+      },
+      {
+        "id": "2003993",
+        "home": "OLD",
+        "away": "FRS",
+        "choose": "home"
+      }
+    ]
+  },
+  "scenarios": {
+    "best": {
+      "iterations": 15000,
+      "playoffs": 33.3,
+      "playin": 23.2,
+      "mid": 32.9,
+      "releg": 10.6
+    },
+    "current": {
+      "iterations": 15000,
+      "playoffs": 33.9,
+      "playin": 22.7,
+      "mid": 33.1,
+      "releg": 10.4
+    },
+    "worst": {
+      "iterations": 15000,
+      "playoffs": 34.4,
+      "playin": 22,
+      "mid": 32.8,
+      "releg": 10.9
+    }
+  }
+}
