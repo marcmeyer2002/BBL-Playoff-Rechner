@@ -1,0 +1,110 @@
+{
+  "generatedAt": "2025-09-09T18:58:29.673Z",
+  "matchDay": 1,
+  "games": [
+    {
+      "id": "2003986",
+      "matchDay": 1,
+      "scheduledTime": "2025-09-26T18:00:00Z",
+      "home": {
+        "tlc": "FCB",
+        "name": "FC Bayern München Basketball"
+      },
+      "away": {
+        "tlc": "JEN",
+        "name": "Science City Jena"
+      }
+    },
+    {
+      "id": "2003988",
+      "matchDay": 1,
+      "scheduledTime": "2025-09-27T16:30:00Z",
+      "home": {
+        "tlc": "BRA",
+        "name": "Basketball Löwen Braunschweig"
+      },
+      "away": {
+        "tlc": "BAM",
+        "name": "BMA365 Bamberg Baskets"
+      }
+    },
+    {
+      "id": "2003987",
+      "matchDay": 1,
+      "scheduledTime": "2025-09-27T16:30:00Z",
+      "home": {
+        "tlc": "VEC",
+        "name": "RASTA Vechta"
+      },
+      "away": {
+        "tlc": "HDB",
+        "name": "MLP Academics Heidelberg"
+      }
+    },
+    {
+      "id": "2003989",
+      "matchDay": 1,
+      "scheduledTime": "2025-09-27T18:00:00Z",
+      "home": {
+        "tlc": "BON",
+        "name": "Telekom Baskets Bonn"
+      },
+      "away": {
+        "tlc": "WUE",
+        "name": "Fitness First Würzburg Baskets"
+      }
+    },
+    {
+      "id": "2003990",
+      "matchDay": 1,
+      "scheduledTime": "2025-09-28T13:00:00Z",
+      "home": {
+        "tlc": "TRI",
+        "name": "VET-CONCEPT Gladiators Trier"
+      },
+      "away": {
+        "tlc": "HRO",
+        "name": "ROSTOCK SEAWOLVES"
+      }
+    },
+    {
+      "id": "2003991",
+      "matchDay": 1,
+      "scheduledTime": "2025-09-28T13:00:00Z",
+      "home": {
+        "tlc": "HAM",
+        "name": "Veolia Towers Hamburg"
+      },
+      "away": {
+        "tlc": "MBC",
+        "name": "SYNTAINICS MBC"
+      }
+    },
+    {
+      "id": "2003992",
+      "matchDay": 1,
+      "scheduledTime": "2025-09-28T14:30:00Z",
+      "home": {
+        "tlc": "ULM",
+        "name": "ratiopharm ulm"
+      },
+      "away": {
+        "tlc": "CHE",
+        "name": "NINERS Chemnitz"
+      }
+    },
+    {
+      "id": "2003993",
+      "matchDay": 1,
+      "scheduledTime": "2025-09-28T16:00:00Z",
+      "home": {
+        "tlc": "OLD",
+        "name": "EWE Baskets Oldenburg"
+      },
+      "away": {
+        "tlc": "FRS",
+        "name": "SKYLINERS"
+      }
+    }
+  ]
+}

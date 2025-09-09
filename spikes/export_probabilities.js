@@ -43,14 +43,20 @@ async function main() {
     nextMatchday: nextMd,
     iterations: ITERS,
     teams: Object.fromEntries(
-      Object.entries(hists).map(([tlc, rec]) => [
-        tlc,
-        {
-          top8Pct: +(100 * rec.topKCount / rec.iterations).toFixed(1),
-          bottom2Pct: +(100 * rec.bottomRCount / rec.iterations).toFixed(1),
-          rankPct: toPercentages(rec.byRank, rec.iterations), // { "1": %, ..., "18": % }
-        },
-      ])
+      Object.entries(hists).map(([tlc, rec]) => {
+        const wins = Number(base[tlc]?.wins ?? 0);
+        const losses = Number(base[tlc]?.losses ?? 0);
+        const games = wins + losses;
+        return [
+          tlc,
+          {
+            record: { wins, losses, games },
+            top8Pct: +(100 * rec.topKCount / rec.iterations).toFixed(1),
+            bottom2Pct: +(100 * rec.bottomRCount / rec.iterations).toFixed(1),
+            rankPct: toPercentages(rec.byRank, rec.iterations), // { "1": %, ..., "18": % }
+          },
+        ];
+      })
     ),
   };
 

@@ -77,15 +77,21 @@ async function main() {
     seasonId: standRows[0]?.seasonId ?? 2025,
     nextMatchday: nextMd,
     iterations: ITERS,
-    teams: Object.fromEntries(
-      Object.entries(hists).map(([tlc, rec]) => [
-        tlc,
-        {
-          top8Pct: +(100 * rec.topKCount / rec.iterations).toFixed(1),
-          bottom2Pct: +(100 * rec.bottomRCount / rec.iterations).toFixed(1),
-          rankPct: toPercentages(rec.byRank, rec.iterations),
-        },
-      ])
+        teams: Object.fromEntries(
+      Object.entries(hists).map(([tlc, rec]) => {
+        const wins = Number(baseWin ? (condition==='JEN_WIN' ? baseWin[tlc]?.wins : baseLose[tlc]?.wins) : 0);
+        const losses = Number(baseWin ? (condition==='JEN_WIN' ? baseWin[tlc]?.losses : baseLose[tlc]?.losses) : 0);
+        const games = wins + losses;
+        return [
+          tlc,
+          {
+            record: { wins, losses, games },
+            top8Pct: +(100 * rec.topKCount / rec.iterations).toFixed(1),
+            bottom2Pct: +(100 * rec.bottomRCount / rec.iterations).toFixed(1),
+            rankPct: toPercentages(rec.byRank, rec.iterations),
+          },
+        ];
+      })
     ),
   });
 
